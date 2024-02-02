@@ -1,0 +1,19 @@
+--cpu Cortex-M4.fp
+".\objects\main.o"
+".\objects\system_stm32f4xx.o"
+".\objects\rfid_rc522.o"
+".\objects\spi.o"
+".\objects\usart.o"
+".\objects\tim.o"
+".\objects\ff.o"
+".\objects\sdmm.o"
+".\objects\stm32f4xx_gpio.o"
+".\objects\stm32f4xx_rcc.o"
+".\objects\stm32f4xx_spi.o"
+".\objects\stm32f4xx_tim.o"
+".\objects\stm32f4xx_usart.o"
+".\objects\startup_stm32f40xx.o"
+--strict --scatter ".\Objects\RFID_KEIL.sct"
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\RFID_KEIL.map" -o .\Objects\RFID_KEIL.axf

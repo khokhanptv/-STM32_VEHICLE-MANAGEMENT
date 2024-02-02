@@ -17,6 +17,5 @@ This project implements a door control system using RFID technology, STM32 micro
 - RFID ID validation for access control.
 - Secure storage and retrieval of RFID IDs on an SDCard.
 - Utilization of PWM with STM32 for precise servo motor control.
-- Detailed SPI communication between components.
-
+- Detailed SPI communication between components....
 
