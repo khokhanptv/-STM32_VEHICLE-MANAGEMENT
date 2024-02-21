@@ -373,7 +373,7 @@
               <MiscControls></MiscControls>
               <Define>STM32F40_41xxx, USE_STDPERIPH_DRIVER,HSE_VALUE = 8000000</Define>
               <Undefine></Undefine>
-              <IncludePath>.\src;.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\CMSIS\Include;.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\CMSIS\Device\ST\STM32F4xx\Include;.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\STM32F4xx_StdPeriph_Driver\inc;.\inc</IncludePath>
+              <IncludePath>.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\CMSIS\Include;.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\CMSIS\Device\ST\STM32F4xx\Include;.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\STM32F4xx_StdPeriph_Driver\inc;.\inc;.\src;.\TM;.\fatfs;.\fatfs\drivers;.\fatfs\option</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -447,19 +447,9 @@
               <FilePath>.\inc\tim.h</FilePath>
             </File>
             <File>
-              <FileName>diskio.h</FileName>
+              <FileName>tm_stm32f4_fatfs.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\inc\diskio.h</FilePath>
-            </File>
-            <File>
-              <FileName>ff.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\ff.h</FilePath>
-            </File>
-            <File>
-              <FileName>ffconf.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\inc\ffconf.h</FilePath>
+              <FilePath>.\inc\tm_stm32f4_fatfs.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -496,16 +486,6 @@
               <FileType>1</FileType>
               <FilePath>.\src\tim.c</FilePath>
             </File>
-            <File>
-              <FileName>ff.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\ff.c</FilePath>
-            </File>
-            <File>
-              <FileName>sdmm.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\src\sdmm.c</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
@@ -536,6 +516,21 @@
               <FileType>1</FileType>
               <FilePath>.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_usart.c</FilePath>
             </File>
+            <File>
+              <FileName>misc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\STM32F4xx_StdPeriph_Driver\src\misc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_dma.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_dma.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_sdio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\STM32F4xx_StdPeriph_Driver\src\stm32f4xx_sdio.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -545,6 +540,111 @@
               <FileName>startup_stm32f40xx.s</FileName>
               <FileType>2</FileType>
               <FilePath>.\STM32F4xx_DSP_StdPeriph_Lib_V1.9.0\Libraries\CMSIS\Device\ST\STM32F4xx\Source\Templates\arm\startup_stm32f40xx.s</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>TIM</GroupName>
+          <Files>
+            <File>
+              <FileName>defines.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\TM\defines.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm_stm32f4_delay.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TM\tm_stm32f4_delay.c</FilePath>
+            </File>
+            <File>
+              <FileName>tm_stm32f4_delay.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\TM\tm_stm32f4_delay.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm_stm32f4_fatfs.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TM\tm_stm32f4_fatfs.c</FilePath>
+            </File>
+            <File>
+              <FileName>tm_stm32f4_fatfs.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\TM\tm_stm32f4_fatfs.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm_stm32f4_gpio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TM\tm_stm32f4_gpio.c</FilePath>
+            </File>
+            <File>
+              <FileName>tm_stm32f4_gpio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\TM\tm_stm32f4_gpio.h</FilePath>
+            </File>
+            <File>
+              <FileName>tm_stm32f4_spi.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\TM\tm_stm32f4_spi.c</FilePath>
+            </File>
+            <File>
+              <FileName>tm_stm32f4_spi.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\TM\tm_stm32f4_spi.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>FAT</GroupName>
+          <Files>
+            <File>
+              <FileName>syscall.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\fatfs\option\syscall.c</FilePath>
+            </File>
+            <File>
+              <FileName>unicode.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\fatfs\option\unicode.c</FilePath>
+            </File>
+            <File>
+              <FileName>diskio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\fatfs\diskio.c</FilePath>
+            </File>
+            <File>
+              <FileName>diskio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\fatfs\diskio.h</FilePath>
+            </File>
+            <File>
+              <FileName>ff.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\fatfs\ff.c</FilePath>
+            </File>
+            <File>
+              <FileName>ff.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\fatfs\ff.h</FilePath>
+            </File>
+            <File>
+              <FileName>ffconf.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\fatfs\ffconf.h</FilePath>
+            </File>
+            <File>
+              <FileName>integer.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\fatfs\integer.h</FilePath>
+            </File>
+            <File>
+              <FileName>fatfs_sd_sdio.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\fatfs\drivers\fatfs_sd_sdio.c</FilePath>
+            </File>
+            <File>
+              <FileName>fatfs_sd_sdio.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\fatfs\drivers\fatfs_sd_sdio.h</FilePath>
             </File>
           </Files>
         </Group>

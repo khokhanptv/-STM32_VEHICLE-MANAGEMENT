@@ -1,5 +1,8 @@
-.\objects\ff.o: src\ff.c
-.\objects\ff.o: .\inc\ff.h
-.\objects\ff.o: .\inc\ffconf.h
-.\objects\ff.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
-.\objects\ff.o: .\inc\diskio.h
+.\objects\ff.o: fatfs\ff.c
+.\objects\ff.o: fatfs\ff.h
+.\objects\ff.o: fatfs\integer.h
+.\objects\ff.o: fatfs\ffconf.h
+.\objects\ff.o: fatfs\diskio.h
+.\objects\ff.o: .\TM\defines.h
+.\objects\ff.o: .\TM\attributes.h
+.\objects\ff.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdarg.h

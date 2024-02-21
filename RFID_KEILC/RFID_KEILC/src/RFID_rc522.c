@@ -136,7 +136,7 @@ void MFRC522_Reset(void)
 void MFRC522_Init(void)
 {
 	
-	MFRC522_Reset();
+	MFRC522_Reset(); 
 	 	
 	//Timer: TPrescaler*TreloadVal/6.78MHz = 24ms
 	Write_MFRC522(TModeReg, 0x8D);		//Tauto=1; f(Timer) = 6.78MHz/TPreScaler
@@ -316,7 +316,7 @@ uchar MFRC522_Anticoll(uchar *serNum)
 {
     uchar status;
     uchar i;
-	uchar serNumCheck=0;
+		uchar serNumCheck=0;
     uint unLen;
     
 

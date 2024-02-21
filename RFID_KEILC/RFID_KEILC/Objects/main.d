@@ -41,5 +41,13 @@
 .\objects\main.o: .\inc\spi.h
 .\objects\main.o: .\inc\usart.h
 .\objects\main.o: .\inc\tim.h
-.\objects\main.o: .\inc\ff.h
-.\objects\main.o: .\inc\ffconf.h
+.\objects\main.o: .\TM\defines.h
+.\objects\main.o: .\TM\tm_stm32f4_delay.h
+.\objects\main.o: .\TM\attributes.h
+.\objects\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h
+.\objects\main.o: .\inc\tm_stm32f4_fatfs.h
+.\objects\main.o: .\TM\tm_stm32f4_gpio.h
+.\objects\main.o: .\fatfs\ff.h
+.\objects\main.o: .\fatfs\integer.h
+.\objects\main.o: .\fatfs\ffconf.h
+.\objects\main.o: .\fatfs\diskio.h
