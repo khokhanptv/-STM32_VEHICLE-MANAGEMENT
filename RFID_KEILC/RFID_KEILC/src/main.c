@@ -10,6 +10,7 @@ uchar status;
 uchar str[MAX_LEN]; // Max_LEN = 16
 uchar serNum[5];
 char myString[100];
+uchar check,check2;
 uchar Key_Cards[MAX_CARDS][5]; // Mang luu tru du lieu the tu the SD
 uchar test [5] ={0xf3, 0xfa, 0x9c, 0xf7, 0x62};
 FATFS FatFs;
@@ -74,18 +75,16 @@ int main() {
         // Cho the duoc dua vao
         Delay_ms(1000); // Cho 1 giay truoc khi doc the
         status = MFRC522_Request(PICC_REQIDL, str);    
-        if (status == MI_OK) {
-						////
+        if (status == MI_OK) {	
             sprintf(myString,"Your card's number are: %x, %x, %x, %x, %x \r\n",serNum[0], serNum[1], serNum[2], serNum[3],serNum[4]);
 						USART_SendString(myString);
-						///
             status = MFRC522_Anticoll(str);
             memcpy(serNum, str, sizeof(serNum));
-
+						check == 1;
+						check2 == 1;
             // Reset bien cardMatched
             int cardMatched = 0;
 
-            
             USART_SendString("The ID: ");
             for (int k = 0; k < sizeof(serNum); ++k) {
                 sprintf(myString, "%02X ", serNum[k]); // Chuyen tu so sang dang hex
@@ -109,6 +108,17 @@ int main() {
 
             
         }
+		if(check == 1||check2 ==1)
+				{
+				
+					check = 0;
+					check2 = 0;
+					Delay_ms(1000);
+					set_pwm(1500);
+					Delay_ms(2000);
+					set_pwm(500);
+					Delay_ms(1000);
+				}
     }
 
     return 0;
